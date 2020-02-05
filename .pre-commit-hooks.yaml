@@ -1,0 +1,9 @@
+---
+- id: check-proto
+  name: Check protobuf files
+  description: Run protolint against proto files, https://github.com/yoheimuta/protolint
+  stages: [commit, push]
+  entry: pre-commit/check-proto-with-protolint.sh
+  language: script
+  types: [file, text]
+  files: '\.proto$'
